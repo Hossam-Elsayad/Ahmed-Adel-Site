@@ -7,7 +7,6 @@
   --section-padding: 80px ;
   --title-font-size :40px;
 }
-
 /* 🌍 Global Rules */
 * {
   box-sizing: border-box;
@@ -172,7 +171,7 @@ ul {
         display: none;
     }
     .heading .nav .lang {
-        flex-basis: 50%;
+        flex-basis: 60%;
     }
     .heading .nav .icon {
         flex-basis: 10%;
@@ -227,19 +226,17 @@ ul {
     transform: translate(-50% , -50% );
     background-color: transparent;
     text-align: center;
+    width: 100%;
 }
 .landing .content .text p {
     background-color: transparent;
-    font-size: 50px;
     font-weight: 800;
     margin: 10px;
     color: white;
+    font-size:60px ;
 }
 .landing .content .text p:first-child {
     color: var(--main-color);
-}
-.landing .content .text p:nth-child(2) {
-    font-size: 55px;
 }
 .landing .content .button {
     position: absolute;
@@ -254,7 +251,7 @@ ul {
 }
 @media(max-width:767px){
     .landing .content .text p {
-        font-size: 30px;
+        font-size: 35px;
     }
     .landing .content .text p:nth-child(2) {
     font-size: 35px;
@@ -285,6 +282,21 @@ ul {
     height: 60px;
     text-wrap: nowrap;
 }
+@media(max-width:450px){
+    .landing .content .button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 30px;
+        gap: 20px;
+    }
+    .landing .content .button .one ,
+    .landing .content .button .two {
+        width: 100%;
+        margin-left: 0;
+}
+}
 .landing .content .button .one:hover,
 .landing .content .button .two:hover {
     background-color: #000;
@@ -304,8 +316,9 @@ ul {
 /* End Landing */
 /* Start Section two  */
 .section-one {
-    padding: 100px;
+    padding: 100px 0;
     background-color: white;
+    overflow: hidden;
 }
 .section-one .title {
     text-align: center;
@@ -327,12 +340,24 @@ ul {
     margin-top: 20px;
     margin-bottom: 50px;
 }
+@media(max-width:767px){
+    .section-one .title p:first-child {
+        font-size: 25px;
+    }
+    .section-one .title span{
+        font-size: 25px;
+    }
+    .section-one .title p:last-child {
+        font-size: 15px;
+    }
+}
 .section-one .vid {
     position: relative;
     overflow: hidden;
     text-align: center;
-    border-radius: 3%;
+    border-radius: 5%;
     margin-bottom:60px ;
+
 }
 .section-one .vid i {
     position: absolute;
@@ -342,6 +367,14 @@ ul {
     color: white;
     font-size: 65px;
     cursor: pointer;
+}
+@media(max-width:450px){
+    .section-one .vid i {
+        left: 40%;
+        bottom: 50%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+    }
 }
 .section-one .vid .video {
     width: 100%;
@@ -397,12 +430,15 @@ ul {
     color: var(--main-color);
     margin-bottom: 80px;
 }
+@media(max-width:450px){
+    .services .title h2 {
+        font-size: 30px;
+    }
+}
 .services .card-group {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
      gap: 20px;
-    /* display: flex;
-    justify-content: space-between; */
 }
 @media(max-width:993px){
     .services .card-group {
@@ -482,7 +518,7 @@ ul {
 }
 .program .title h2{
     font-size: var(--title-font-size);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .program .title span{
     color: var(--main-color);
@@ -491,6 +527,14 @@ ul {
     color: var(--font-color);
     font-size: 18px;
     font-weight: 600;
+}
+@media(max-width:450px){
+    .program .title h2{
+    font-size: 25px;
+    }
+.program .title p {
+    font-size: 15px;
+}
 }
 .program .card-group {
     display: flex;
@@ -806,6 +850,14 @@ right:-10px;
     width: 50%;
     color: var(--font-color);
 }
+@media(max-width:450px){
+    .story .title h2 {
+    font-size: 25px;
+}
+.story .title p {   
+    font-size: 13px;
+}
+}
 .story .card-group {
     display: flex;
     flex-wrap: wrap;
@@ -929,6 +981,12 @@ right:-10px;
     width: 50%;
     color: var(--font-color);
 }
+@media(max-width:450px ){
+    .pricing .title h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+}
 .pricing .card {
     border: 1px solid var(--font-color);
     width: 40%;
@@ -1030,6 +1088,11 @@ right:-10px;
     transform: translateY(-50%);
     transition: var(--main-transition);
 }
+@media(max-width:450px){
+    .pricing .card .button i{
+        left: 10%;
+    }
+}
 .pricing .card .info {
     display: flex;
     flex-direction: row-reverse;
@@ -1057,6 +1120,11 @@ right:-10px;
 .cust-opp .title h2 {
     font-size: var(--title-font-size);
     margin-bottom: 25px;
+}
+@media(max-width:450px){
+    .cust-opp .title h2 {
+        font-size: 30px;
+    }
 }
 .cust-opp .title span {
     color: var(--main-color);
@@ -1145,10 +1213,17 @@ right:-10px;
     background-color: white;
     text-align: center;
 }
+.partner .title h2 {
+    margin-bottom: 25px ;
+}
 .partner .title span {
     color: var(--main-color);
-     font-size: var(--title-font-size);
-    margin-bottom: 25px;
+    font-size: var(--title-font-size);
+}
+@media(max-width:450px){
+    .partner .title span{
+        font-size: 30px;
+    }
 }
 .partner .title p {
     font-size: 15px;
@@ -1251,6 +1326,11 @@ right:-10px;
     font-size: var(--title-font-size);
     margin-bottom: 25px;
 }
+@media (max-width:450px){
+    .jops .title h2 {
+        font-size: 30px;
+    }
+}
 .jops .title span {
     color: var(--main-color);
 }
@@ -1345,6 +1425,11 @@ footer .col-group {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+}
+@media (max-width:600px){
+    footer .col-group {
+        flex-direction: column;
+    }
 }
 footer .col-group .col-one {
     flex-basis: 25%;
